@@ -3,12 +3,12 @@ using UnityEngine;
 public class MoveEnemy_1 : MonoBehaviour
 {
     [SerializeField] EnemyWaves WaveEnemy;
-    [SerializeField] float EnemySpeed;
     int pointIndex = 0;
     Transform[] getPointsWave;
     void Start()
     {
         getPointsWave = WaveEnemy.WavePoints();
+        transform.position = WaveEnemy.GetStartingWaypoint().position;
     }
 
     // Update is called once per frame
@@ -19,13 +19,14 @@ public class MoveEnemy_1 : MonoBehaviour
     public void PathWaves()
     {
         Vector3 WaveTargetPositions = getPointsWave[pointIndex].position;
-        transform.position = Vector2.MoveTowards(transform.position,WaveTargetPositions, EnemySpeed*Time.deltaTime);
+        float moveDelta = WaveEnemy.GetEnemyMoveSpeed() * Time.deltaTime;
+        transform.position = Vector2.MoveTowards(transform.position,WaveTargetPositions, moveDelta);
         if(transform.position == WaveTargetPositions)
         {
             pointIndex++;
             if (pointIndex >= getPointsWave.Length)
             {
-                pointIndex = 0;
+                Destroy(gameObject);
             }
         }
     }

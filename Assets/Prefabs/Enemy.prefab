@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4061450355004716733}
   - component: {fileID: 7036325725161490927}
-  - component: {fileID: 6764708415625429545}
+  - component: {fileID: 241112903212052381}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -93,7 +93,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!114 &6764708415625429545
+--- !u!114 &241112903212052381
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,4 +106,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveEnemy_1
   WaveEnemy: {fileID: 11400000, guid: 36d7b6c910490d144bb9f8ce98f189ce, type: 2}
-  EnemySpeed: 5

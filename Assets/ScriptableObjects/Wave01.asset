@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Wave01
   m_EditorClassIdentifier: Assembly-CSharp::EnemyWaves
   myEnemyWave: {fileID: 3204317912486557582, guid: c8d6045f0615b0b44a64fbc1247cfbb5, type: 3}
+  EnemySpeed: 5
