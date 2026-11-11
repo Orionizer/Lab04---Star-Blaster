@@ -727,6 +727,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wave (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6193796916329378105, guid: 5ee4fa6d3b8555946a8c1b330e685a2e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.35
+      objectReference: {fileID: 0}
     - target: {fileID: 7640819943297166182, guid: 5ee4fa6d3b8555946a8c1b330e685a2e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
