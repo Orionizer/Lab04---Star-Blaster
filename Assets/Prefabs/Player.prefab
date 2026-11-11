@@ -109,7 +109,7 @@ MonoBehaviour:
   moveSpeed: 10
   leftPos: 0.5
   rightPos: 0.5
-  upPos: 0.5
+  upPos: 7
   downPos: 0.5
 --- !u!114 &7999840031959944443
 MonoBehaviour:

@@ -32,7 +32,6 @@ public class PlayerController : MonoBehaviour
         newPos.x = Mathf.Clamp(newPos.x, minBound.x + leftPos, maxBound.x - rightPos);
         newPos.y = Mathf.Clamp(newPos.y, minBound.y + downPos, maxBound.y - upPos);
 
-        transform.position += moveVector * moveSpeed * Time.deltaTime;
         transform.position = newPos;
     }
     void InBound()
