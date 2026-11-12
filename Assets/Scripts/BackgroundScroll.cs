@@ -1,0 +1,18 @@
+using UnityEngine;
+
+public class BackgroundScroll : MonoBehaviour
+{
+    [SerializeField] Vector2 scrollSpeed;
+    Vector2 offset;
+    Material material;
+    void Start()
+    {
+        material = GetComponent<SpriteRenderer>().material;
+    }
+
+    void Update()
+    {
+        offset += scrollSpeed * Time.deltaTime;
+        material.mainTextureOffset = offset;
+    }
+}
