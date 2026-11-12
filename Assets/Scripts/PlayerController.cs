@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float rightPos;
     [SerializeField] float upPos;
     [SerializeField] float downPos;
+    Shooter playerShooter;
+    InputAction fireAction;
     InputAction moveAction;
 
     Vector3 moveVector;
@@ -16,13 +18,16 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        playerShooter = GetComponent<Shooter>();
         moveAction = InputSystem.actions.FindAction("Move");
+        fireAction = InputSystem.actions.FindAction("Attack");
     }
 
     void Update()
     {
         MovePlayer();
         InBound();
+        Fire();
     }
 
     void MovePlayer()
@@ -39,5 +44,10 @@ public class PlayerController : MonoBehaviour
         Camera mainCamera = Camera.main;
         minBound = mainCamera.ViewportToWorldPoint(new Vector2(0,0));
         maxBound = mainCamera.ViewportToWorldPoint(new Vector2(1,1));
+    }
+
+    void Fire()
+    {
+        playerShooter.isFiring = fireAction.IsPressed();
     }
 }

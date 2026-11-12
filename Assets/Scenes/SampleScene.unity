@@ -152,7 +152,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 36d7b6c910490d144bb9f8ce98f189ce, type: 2}
   - {fileID: 11400000, guid: 16f65853f37d11c499dbc575ec9625c6, type: 2}
   TimeBetweenWaves: 1
-  isLooping: 0
+  isLooping: 1
 --- !u!4 &39979216
 Transform:
   m_ObjectHideFlags: 0
@@ -313,6 +313,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4676330789912831157, guid: 201e2a46d3694be47b0b66edd94196d7, type: 3}
+      propertyPath: projectileSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: -4676330789912831157, guid: 201e2a46d3694be47b0b66edd94196d7, type: 3}
+      propertyPath: projectileLifetime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1163765180307444353, guid: 201e2a46d3694be47b0b66edd94196d7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.05
