@@ -2,11 +2,14 @@ using UnityEngine;
 
 public class MoveEnemy_1 : MonoBehaviour
 {
-    [SerializeField] EnemyWaves WaveEnemy;
+    EnemySpawner enemySpawner;
+    EnemyWaves WaveEnemy;
     int pointIndex = 0;
     Transform[] getPointsWave;
     void Start()
     {
+        enemySpawner = FindFirstObjectByType<EnemySpawner>();
+        WaveEnemy = enemySpawner.GetCurrentWave();
         getPointsWave = WaveEnemy.WavePoints();
         transform.position = WaveEnemy.GetStartingWaypoint().position;
     }
