@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 5264529025004477263}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.76, y: 10.76, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -199,6 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   health: 50
+  HitParticle: {fileID: 7532292514826131990, guid: 98be449969750e54b97e1a17ed4bb57e, type: 3}
 --- !u!1 &8424369297266004800
 GameObject:
   m_ObjectHideFlags: 0
